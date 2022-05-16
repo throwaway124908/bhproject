@@ -1,0 +1,20 @@
+﻿@model ViewModels.FetchRandomReasonViewModel
+@{
+    ViewData["Title"] = "Edit Reasons";
+}
+
+<div class="paddingall textcenter">
+    <h3>Your randomly fetched reason for why I want to work at BHHC is:</h3>
+    <div class="margintop20 textcenter">
+        @{
+            if (Model.RandomReason == null)
+            {
+                <span>sorry, no reasons exist yet</span>
+            }
+            else
+            {
+                <span>@Model.RandomReason.CreatedUtc.ToLocalTime(): @Model.RandomReason.Text</span>
+            }
+        }
+    </div>
+</div>

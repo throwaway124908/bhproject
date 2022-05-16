@@ -1,0 +1,30 @@
+
+
+.floatcontainer_left[class]::before,
+.floatcontainer_left[class]::after,
+.floatcontainer_right[class]::before,
+.floatcontainer_right[class]::after {
+    /*clearfix*/
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.floatcontainer_left[class] > *,
+.floatcontainer_right[class] {
+    display: block;
+    position: relative;
+    width: auto;
+    /*have to do min-height: 1px because*/
+    /*floating divs that take up no space are*/
+    /*removed from the document flow*/
+    min-height: 1px;
+}
+
+.floatcontainer_left[class] > * {
+    float: left;
+}
+
+.floatcontainer_right[class] > * {
+    float: right;
+}

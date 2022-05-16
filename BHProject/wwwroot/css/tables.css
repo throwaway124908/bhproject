@@ -1,0 +1,535 @@
+table.wrap[class] > * > tr > * {
+    white-space: normal;
+}
+
+table.nowrap[class] > * > tr > * {
+    white-space: nowrap;
+}
+
+table.hardwrap[class] > * > tr > * {
+    white-space: normal;
+    word-break: break-all;
+}
+
+table.textcenter[class] > * > tr > * {
+    text-align: center;
+}
+
+table.textright[class] > * > tr > * {
+    text-align: right;
+}
+
+table.textjustify[class] > * > tr > * {
+    text-align: justify;
+}
+
+table.textleft[class] > * > tr > * {
+    text-align: left;
+}
+
+table.texttop[class] > * > tr > * {
+    vertical-align: top;
+}
+
+table.textmiddle[class] > * > tr > * {
+    vertical-align: middle;
+}
+
+table.textbottom[class] > * > tr > * {
+    vertical-align: bottom;
+}
+
+table.textbaseline[class] > * > tr > * {
+    vertical-align: baseline;
+}
+
+table.center[class][class] {
+    width: 0.01px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table.left[class][class] {
+    width: 0.01px;
+    margin-right: auto;
+}
+
+table.right[class][class] {
+    width: 0.01px;
+    margin-left: auto;
+}
+
+table.list > * > tr > *:first-child {
+    white-space: nowrap;
+    width: 0.01px;
+    text-align: right;
+}
+
+td.stretch, th.stretch {
+    width: 99.99%;
+}
+
+table.shrink, td.shrink, th.shrink {
+    width: 0.01px;
+}
+
+/*##################################################################################################################################################################*/
+/*##################################################################################################################################################################*/
+/*##################################################################################################################################################################*/
+/*##################################################################################################################################################################*/
+
+table.col2 > * > tr > * {
+    width: 50%;
+}
+
+table.col3 > * > tr > * {
+    width: calc(100% / 3);
+}
+
+table.col4 > * > tr > * {
+    width: 25%;
+}
+
+table.col5 > * > tr > * {
+    width: 20%;
+}
+
+table.col6 > * > tr > * {
+    width: calc(100% / 6);
+}
+
+table.row2 > * > tr > * {
+    height: 50%;
+}
+
+table.row3 > * > tr > * {
+    height: calc(100% / 3);
+}
+
+table.row4 > * > tr > * {
+    height: 25%;
+}
+
+table.row5 > * > tr > * {
+    height: 20%;
+}
+
+table.row6 > * > tr > * {
+    height: calc(100% / 6);
+}
+
+/*##################################################################################################################################################################*/
+/*##################################################################################################################################################################*/
+/*##################################################################################################################################################################*/
+/*##################################################################################################################################################################*/
+table.rowspace1,
+table.rowspace2,
+table.rowspace3,
+table.rowspace4,
+table.rowspace5,
+table.rowspace6,
+table.rowspace7,
+table.rowspace8,
+table.rowspace9,
+table.rowspace10 {
+    border-collapse: separate;
+}
+
+table.rowspace1 {
+    border-spacing: 0px 1px;
+}
+
+table.rowspace2 {
+    border-spacing: 0px 2px;
+}
+
+table.rowspace3 {
+    border-spacing: 0px 3px;
+}
+
+table.rowspace4 {
+    border-spacing: 0px 4px;
+}
+
+table.rowspace5 {
+    border-spacing: 0px 5px;
+}
+
+table.rowspace6 {
+    border-spacing: 0px 6px;
+}
+
+table.rowspace7 {
+    border-spacing: 0px 7px;
+}
+
+table.rowspace8 {
+    border-spacing: 0px 8px;
+}
+
+table.rowspace9 {
+    border-spacing: 0px 9px;
+}
+
+table.rowspace10 {
+    border-spacing: 0px 10px;
+}
+
+/*##################################################################################################################################################################*/
+/*##################################################################################################################################################################*/
+/*##################################################################################################################################################################*/
+/*##################################################################################################################################################################*/
+
+table.rowpad2[class] > * > tr > * {
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+table.rowpad4[class] > * > tr > * {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+table.rowpad5[class] > * > tr > * {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+table.rowpad6[class] > * > tr > * {
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+table.rowpad8[class] > * > tr > * {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+table.rowpad10[class] > * > tr > * {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+table.rowpad12[class] > * > tr > * {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+table.rowpad14[class] > * > tr > * {
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+table.rowpad16[class] > * > tr > * {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+table.rowpad18[class] > * > tr > * {
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+
+table.rowpad20[class] > * > tr > * {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/*##################################################################################################################################################################*/
+/*##################################################################################################################################################################*/
+/*##################################################################################################################################################################*/
+/*##################################################################################################################################################################*/
+
+/*the following styles create HORIZONTAL spaces between table cells. style a table like <table class="padh2"> to create a table with 2px left-side cell padding*/
+/*works in IE7+*/
+
+table.padh2 > * > tr > *:first-child,
+table.padh4 > * > tr > *:first-child,
+table.padh5 > * > tr > *:first-child,
+table.padh6 > * > tr > *:first-child,
+table.padh8 > * > tr > *:first-child,
+table.padh10 > * > tr > *:first-child,
+table.padh12 > * > tr > *:first-child,
+table.padh14 > * > tr > *:first-child,
+table.padh16 > * > tr > *:first-child,
+table.padh18 > * > tr > *:first-child,
+table.padh20 > * > tr > *:first-child,
+table.padh30 > * > tr > *:first-child,
+table.padh40 > * > tr > *:first-child,
+table.padh50 > * > tr > *:first-child {
+    padding-left: 0px;
+}
+
+table.padh2 > * > tr > *:last-child,
+table.padh4 > * > tr > *:last-child,
+table.padh5 > * > tr > *:last-child,
+table.padh6 > * > tr > *:last-child,
+table.padh8 > * > tr > *:last-child,
+table.padh10 > * > tr > *:last-child,
+table.padh12 > * > tr > *:last-child,
+table.padh14 > * > tr > *:last-child,
+table.padh16 > * > tr > *:last-child,
+table.padh18 > * > tr > *:last-child,
+table.padh20 > * > tr > *:last-child,
+table.padh30 > * > tr > *:last-child,
+table.padh40 > * > tr > *:last-child,
+table.padh50 > * > tr > *:last-child {
+    padding-right: 0px;
+}
+
+table.padh2 > * > tr > * {
+    padding-left: 1px;
+    padding-right: 1px;
+}
+
+table.padh4 > * > tr > * {
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+table.padh5 > * > tr > * {
+    padding-left: 3px;
+    padding-right: 2px;
+}
+
+table.padh6 > * > tr > * {
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+table.padh8 > * > tr > * {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+table.padh10 > * > tr > * {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+table.padh12 > * > tr > * {
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+table.padh14 > * > tr > * {
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+table.padh16 > * > tr > * {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+table.padh18 > * > tr > * {
+    padding-left: 9px;
+    padding-right: 9px;
+}
+
+table.padh20 > * > tr > * {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+table.padh30 > * > tr > * {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+table.padh40 > * > tr > * {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+table.padh50 > * > tr > * {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+/*##################################################################################################################################################################*/
+/*##################################################################################################################################################################*/
+/*##################################################################################################################################################################*/
+/*##################################################################################################################################################################*/
+
+/*the following styles create VERTICAL spaces between table cells. style a table like <table class="padv2"> to create a table with 2px top-side cell padding*/
+/*works in IE7+*/
+
+table.padv2 > * > tr:first-child > *,
+table.padv4 > * > tr:first-child > *,
+table.padv5 > * > tr:first-child > *,
+table.padv6 > * > tr:first-child > *,
+table.padv8 > * > tr:first-child > *,
+table.padv10 > * > tr:first-child > *,
+table.padv12 > * > tr:first-child > *,
+table.padv14 > * > tr:first-child > *,
+table.padv16 > * > tr:first-child > *,
+table.padv18 > * > tr:first-child > *,
+table.padv20 > * > tr:first-child > *,
+table.padv30 > * > tr:first-child > *,
+table.padv40 > * > tr:first-child > *,
+table.padv50 > * > tr:first-child > * {
+    padding-top: 0px;
+}
+
+table.padv2 > * > tr:last-child > *,
+table.padv4 > * > tr:last-child > *,
+table.padv5 > * > tr:last-child > *,
+table.padv6 > * > tr:last-child > *,
+table.padv8 > * > tr:last-child > *,
+table.padv10 > * > tr:last-child > *,
+table.padv12 > * > tr:last-child > *,
+table.padv14 > * > tr:last-child > *,
+table.padv16 > * > tr:last-child > *,
+table.padv18 > * > tr:last-child > *,
+table.padv20 > * > tr:last-child > *,
+table.padv30 > * > tr:last-child > *,
+table.padv40 > * > tr:last-child > *,
+table.padv50 > * > tr:last-child > * {
+    padding-bottom: 0px;
+}
+
+table.padv2 > * > tr > * {
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+table.padv4 > * > tr > * {
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+table.padv5 > * > tr > * {
+    padding-top: 3px;
+    padding-bottom: 2px;
+}
+
+table.padv6 > * > tr > * {
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+table.padv8 > * > tr > * {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+table.padv10 > * > tr > * {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+table.padv12 > * > tr > * {
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+table.padv14 > * > tr > * {
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+table.padv16 > * > tr > * {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+table.padv18 > * > tr > * {
+    padding-top: 9px;
+    padding-bottom: 9px;
+}
+
+table.padv20 > * > tr > * {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+table.padv30 > * > tr > * {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+table.padv40 > * > tr > * {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+table.padv50 > * > tr > * {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+/*##################################################################################################################################################################*/
+/*##################################################################################################################################################################*/
+/*##################################################################################################################################################################*/
+/*##################################################################################################################################################################*/
+
+/*the following styles create a table with separate and spaced cells (uncollapsed)*/
+/*works in IE7+*/
+
+table.cellspace1[class],
+table.cellspace2[class],
+table.cellspace3[class],
+table.cellspace4[class],
+table.cellspace5[class],
+table.cellspace6[class],
+table.cellspace7[class],
+table.cellspace8[class],
+table.cellspace9[class],
+table.cellspace10[class] {
+    border-collapse: separate;
+}
+
+table.cellspace1[class] {
+    border-spacing: 1px;
+}
+
+table.cellspace2[class] {
+    border-spacing: 2px;
+}
+
+table.cellspace3[class] {
+    border-spacing: 3px;
+}
+
+table.cellspace4[class] {
+    border-spacing: 4px;
+}
+
+table.cellspace5[class] {
+    border-spacing: 5px;
+}
+
+table.cellspace6[class] {
+    border-spacing: 6px;
+}
+
+table.cellspace7[class] {
+    border-spacing: 7px;
+}
+
+table.cellspace8[class] {
+    border-spacing: 8px;
+}
+
+table.cellspace9[class] {
+    border-spacing: 9px;
+}
+
+table.cellspace10[class] {
+    border-spacing: 10px;
+}
+
+/*##################################################################################################################################################################*/
+/*##################################################################################################################################################################*/
+/*##################################################################################################################################################################*/
+/*##################################################################################################################################################################*/
+
+table.cellborder > * > tr > * {
+    border-width: 1px;
+}
+
+/*##################################################################################################################################################################*/
+/*##################################################################################################################################################################*/
+/*##################################################################################################################################################################*/
+/*##################################################################################################################################################################*/

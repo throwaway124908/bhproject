@@ -1,0 +1,391 @@
+/*all inputs*/
+
+textarea,
+select,
+input,
+button,
+a.button,
+a.buttongreen,
+a.buttonred,
+a.buttonpurple,
+a.buttongray,
+a.buttonwhite {
+    /*browsers will automatically change input display property to "inline-block" if set to just "inline"*/
+    font-family: inherit;
+    /*font-family: 'Menlo', 'Lucida Console', 'Monaco', 'Consolas', monospace;*/
+    display: inline-block;
+    vertical-align: baseline;
+    line-height: 1.33;
+}
+
+    button.clear {
+        background-color: transparent;
+        border-width: 0px;
+        border-radius: 0px;
+        padding: 0px;
+        margin: 0px;
+        background-image: none;
+        box-shadow: none;
+    }
+
+    textarea:disabled,
+    select:disabled,
+    input:disabled,
+    button:disabled,
+    a.button:disabled,
+    a.buttongreen:disabled,
+    a.buttonred:disabled,
+    a.buttonpurple:disabled,
+    a.buttongray:disabled,
+    a.buttonwhite:disabled {
+        opacity: 0.5;
+        transform: none;
+    }
+
+.glyph {
+    width: 1em;
+    height: auto;
+    line-height: 1em;
+    text-align: center;
+    font-family: 'Icomoon';
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+input[type="button"].glyph,
+input[type="submit"].glyph,
+button.glyph {
+    width: 1.33em;
+    /*
+    set height to auto because the height of an element with height:1.33, if not an integer, gets rounded to the nearest whole pixel, whereas
+    the height of an element containing text with line-height:1.33, if not an integer, will always be rounded down.
+    the height needs to be rounded down so that any neighboring buttons whose heights are auto will be flush with each other.
+    */
+    height: auto;
+    line-height: 1.33;
+    box-sizing: content-box;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/*select inputs*/
+
+select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: #ffffff;
+    overflow: hidden;
+    border-radius: 0px 0px 0px 0px;
+    border-width: 0px;
+    border-color: rgba(0,0,0,0.5);
+    border-style: solid;
+    /*
+    */
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+    width: auto;
+    /*
+    min-width:100% here tells the select element to fill its container,
+    but only if the container is wider than the select element's widest option
+    */
+    min-width: 100%;
+    text-align: left;
+    padding: 4px 23px 4px 3px;
+    background-size: 20px auto;
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-color: rgba(129,136,143,1);
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAEACAQAAACpT7iNAAAAB3RJTUUH5QkFEQ0qw2LMDgAAAAlwSFlzAAALEQAACxEBf2RfkQAAAARnQU1BAACxjwv8YQUAAAFJSURBVHja7dxBEoIwDAVQYDyentYD6sKFowJN0jIsfC4dkv8GSxs3zNN1OvWznBsPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwTZfvLx73YwPnW+MOfF9wbPzqT3AcYa3zEr3wmPjNRTiesNVxyRaMjd99DMcR9jot1cIx8c2NqJ/Q6tDcCfsI7erAVlwnRCpDZ0GNEKsKHkZ5QrQifBrmCPGrE8dxvGkGm5oHYo1z9yo5kLSbZ1dLeiLaD8gv1sJIth1SeVxLM+F6UG23KA6lv2HV/bI8FX8G1rfrjrH8HdpzYHX9L3gFd56X3kUDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPD3gCcLsxKdW/8wKgAAAABJRU5ErkJggg==');
+}
+
+option {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    color: #000000;
+    cursor: pointer;
+    background-color: #ffffff;
+    border-width: 1px;
+    border-color: #000000;
+    border-style: solid;
+    /*the <option> font-family must be a TTF font that is installed on the user's computer*/
+    /*this is because the drop-down box is rendered by the OS (outside of the HTML engine)*/
+    font-family: 'Arial';
+    font-size: 12px;
+}
+
+/*text inputs*/
+
+textarea, input:not([type="checkbox"]):not([type="radio"]):not([type="button"]):not([type="submit"]) {
+    width: 100%;
+    font-size: 16px;
+}
+
+textarea, input[type="text"], input[type="password"] {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    padding: 5px;
+    background-position: center top;
+    background-repeat: repeat-x;
+    background-color: #ffffff;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAFCAQAAAAujU4UAAAAB3RJTUUH5AYUFgEbmu/hMwAAAAlwSFlzAAAewgAAHsIBbtB1PgAAAARnQU1BAACxjwv8YQUAAAAXSURBVHjaY2BIY2J4w8wgwszAzczAAAAPewF9InGASgAAAABJRU5ErkJggg==');
+    border-width: 1px;
+    border-color: rgba(129,136,143,1);
+    text-align: left;
+    border-radius: 0px;
+    color: #000000;
+    /*
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+    */
+}
+
+textarea {
+    min-height: 7em;
+    resize: none;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+/*file inputs*/
+
+input[type="file"] {
+    font-size: 16px;
+    cursor: pointer;
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 0px;
+    padding: 5px;
+    overflow: hidden;
+}
+
+/*checkbox inputs*/
+
+input[type="checkbox"] {
+    cursor: pointer;
+}
+
+/*radio inputs*/
+
+input[type="radio"] {
+    cursor: pointer;
+}
+
+/*buttons*/
+
+/*for old-fashioned buttons, specify border-width, background-color, or border-style to the button and submit types*/
+
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+button::-moz-focus-inner {
+    border-width: 0px;
+    padding: 5px;
+}
+
+input[type="button"].big,
+input[type="submit"].big,
+button.big {
+    /*for chunky buttons*/
+    font-size: 115%;
+}
+
+input[type="button"],
+input[type="submit"],
+button,
+a.button,
+a.buttongreen,
+a.buttonred,
+a.buttonpurple,
+a.buttongray,
+a.buttonwhite {
+    /*have to use -webkit-appearance: none so that iOS mobile Safari properly applies border-radius*/
+    font-size: 14px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    width: auto;
+    cursor: pointer;
+    color: #ffffff;
+    border-width: 0px;
+    padding: 5px 10px;
+    text-align: center;
+    border-radius: 6px;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /*
+    */
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+    text-decoration: none !important;
+    text-decoration-line: none !important;
+    /*########################################*/
+    transition-delay: 0s;
+    transition-property: all;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in-out;
+}
+
+    input[type="button"]:not(:disabled):hover,
+    input[type="submit"]:not(:disabled):hover,
+    button:not(:disabled):hover,
+    a.button:not(:disabled):hover,
+    a.buttongreen:not(:disabled):hover,
+    a.buttonred:not(:disabled):hover,
+    a.buttonpurple:not(:disabled):hover,
+    a.buttongray:not(:disabled):hover,
+    a.buttonwhite:not(:disabled):hover {
+        transform: scale(1.1);
+    }
+
+    input[type="button"]:disabled,
+    input[type="submit"]:disabled,
+    button:disabled,
+    a.button:disabled,
+    a.buttongreen:disabled,
+    a.buttonred:disabled,
+    a.buttonpurple:disabled,
+    a.buttongray:disabled,
+    a.buttonwhite:disabled {
+        background-color: rgba(129,136,143,1);
+    }
+
+input[type="button"],
+input[type="submit"],
+button,
+a.button,
+.buttonbackgroundcolor {
+    background-color: #006dc0;
+    color: #ffffff;
+    /*
+    background-color:  rgba(129,136,143,1);
+    */
+    /*
+    background: rgb(66,69,72);
+    background: linear-gradient(0deg, rgba(66,69,72,1) 0%, rgba(129,136,141,1) 100%);
+    */
+}
+
+.buttoncolortext {
+    color: #006dc0;
+}
+
+input[type="button"]:active,
+input[type="submit"]:active,
+button:active,
+a.button:active {
+    /*
+        background: rgb(66,69,72);
+        background: linear-gradient(180deg, rgba(66,69,72,1) 0%, rgba(129,136,141,1) 100%);
+        */
+}
+
+input[type="button"].green,
+input[type="submit"].green,
+button.green,
+a.buttongreen {
+    background-color: #236f49;
+    /*
+        background: rgb(21,65,43);
+        background: linear-gradient(0deg, rgba(21,65,43,1) 0%, rgba(52,166,108,1) 100%);
+        */
+}
+
+    input[type="button"].green:active,
+    input[type="submit"].green:active,
+    button.green:active,
+    a.buttongreen:active {
+        /*
+            background: rgb(21,65,43);
+            background: linear-gradient(180deg, rgba(21,65,43,1) 0%, rgba(52,166,108,1) 100%);
+        */
+    }
+
+input[type="button"].red,
+input[type="submit"].red,
+button.red,
+a.buttonred {
+    background-color: #bd1d1d;
+    /*
+        background: rgb(125,37,37);
+        background: linear-gradient(0deg, rgba(125,37,37,1) 0%, rgba(206,88,88,1) 100%);
+        */
+}
+
+    input[type="button"].red:active,
+    input[type="submit"].red:active,
+    button.red:active,
+    a.buttonred:active {
+        /*
+            background: rgb(125,37,37);
+            background: linear-gradient(180deg, rgba(125,37,37,1) 0%, rgba(206,88,88,1) 100%);
+            */
+    }
+
+input[type="button"].purple,
+input[type="submit"].purple,
+button.purple,
+a.buttonpurple {
+    background-color: #8a1ebc;
+    /*
+        background: rgb(125,37,37);
+        background: linear-gradient(0deg, rgba(125,37,37,1) 0%, rgba(206,88,88,1) 100%);
+        */
+}
+
+    input[type="button"].purple:active,
+    input[type="submit"].purple:active,
+    button.purple:active,
+    a.buttonpurple:active {
+        /*
+            background: rgb(125,37,37);
+            background: linear-gradient(180deg, rgba(125,37,37,1) 0%, rgba(206,88,88,1) 100%);
+            */
+    }
+
+input[type="button"].gray,
+input[type="submit"].gray,
+button.gray,
+a.buttongray {
+    background-color: rgba(129,136,143,1);
+    /*
+        background: rgb(125,37,37);
+        background: linear-gradient(0deg, rgba(125,37,37,1) 0%, rgba(206,88,88,1) 100%);
+        */
+}
+
+    input[type="button"].gray:active,
+    input[type="submit"].gray:active,
+    button.gray:active,
+    a.buttongray:active {
+        /*
+            background: rgb(125,37,37);
+            background: linear-gradient(180deg, rgba(125,37,37,1) 0%, rgba(206,88,88,1) 100%);
+            */
+    }
+
+
+input[type="button"].white,
+input[type="submit"].white,
+button.white,
+a.buttonwhite {
+    background-color: #ffffff;
+    color: #000000;
+    /*
+        background: rgb(125,37,37);
+        background: linear-gradient(0deg, rgba(125,37,37,1) 0%, rgba(206,88,88,1) 100%);
+        */
+}
+
+    input[type="button"].white:active,
+    input[type="submit"].white:active,
+    button.white:active,
+    a.buttonwhite:active {
+        /*
+            background: rgb(125,37,37);
+            background: linear-gradient(180deg, rgba(125,37,37,1) 0%, rgba(206,88,88,1) 100%);
+            */
+    }

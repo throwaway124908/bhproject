@@ -1,0 +1,54 @@
+﻿@model ViewModels.EditReasonsViewModel
+@{
+    ViewData["Title"] = "Edit Reasons";
+}
+@{
+
+}
+<form id="EditForm" autocomplete="off">
+    <div class="paddingall">
+        <div class="row720_3cols_spaceh_spacev">
+            <div>
+                <h5>Reason 1</h5>
+                <div class="margintop">
+                    <textarea name="Reason1">@Model.Reason1?.Text</textarea>
+                </div>
+            </div>
+            <div>
+                <h5>Reason 2</h5>
+                <div class="margintop">
+                    <textarea name="Reason2">@Model.Reason2?.Text</textarea>
+                </div>
+            </div>
+            <div>
+                <h5>Reason 3</h5>
+                <div class="margintop">
+                    <textarea name="Reason3">@Model.Reason3?.Text</textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<div class="textcenter margintop20">
+    <button class="green fontsize100px" style="border-radius:40px;" id="SaveButton">Save</button>
+</div>
+<script>
+    (function(){
+        let EditForm = document.getElementById("EditForm");
+        let SaveButton = document.getElementById("SaveButton");
+        SaveButton.onclick = function(){
+    XHR.post(EditForm, "/api/editreasons", function(){
+        let ApiResult = this.JSON;
+        if(ApiResult == null){
+        Contoso.popup_alert("A server error occurred.",null,"Error");
+        }else if(ApiResult["success"] != true){
+        Contoso.popup_alert(ApiResult["info"],null,"Error");
+        }else{
+        Contoso.popup_alert("Data was saved!",null,"Success");
+        }
+        UndoDisable();
+    }, null, function(){UndoDisable();},function(){UndoDisable();}, function(){UndoDisable();});
+    let UndoDisable = Contoso.LockAndFreezeBody();
+        };
+    })();
+</script>

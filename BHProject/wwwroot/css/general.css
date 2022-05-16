@@ -1,0 +1,1217 @@
+@font-face {
+    font-family: "Icomoon";
+    src: url('/fonts/icomoon.woff') format("woff");
+}
+
+@font-face {
+    font-family: "Charlie Text";
+    src: url("/fonts/charlietext.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Crimson Text";
+    src: url("/fonts/crimsontext.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Roboto Mono";
+    src: url("/fonts/robotomono.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Open Sans Regular";
+    src: url("/fonts/OpenSans-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Open Sans Extra Bold";
+    src: url("/fonts/OpenSans-ExtraBold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Open Sans Semi Bold";
+    src: url("/fonts/OpenSans-SemiBold.woff") format("woff");
+}
+
+/*don't put position:relative in html tag. if it's there, and it's being loaded through an iframe in IE, the iframe will be blank */
+html {
+    position: relative;
+    height: 100%;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+body {
+    /*
+        IN IE11, SCROLLABLE ELEMENTS CONTAINING LARGE/COMPLEX DOMS HAVE SLOW PERFORMANCE
+        SO, DON'T WRAP ALL YOUR CONTENT IN A FIXED DIV, BECAUSE IT WILL BE VERY SLOW IN IE11
+    */
+    white-space: normal;
+    -webkit-text-size-adjust: 100%;
+    position: relative;
+    height: 100%;
+    overflow-x: visible;
+    overflow-y: visible;
+    line-height: 1.33;
+}
+
+*,
+*::after,
+*::before {
+    background-image: none;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-position: 0% 0%;
+    background-clip: border-box;
+    color: inherit;
+    fill: inherit;
+    box-sizing: border-box;
+    position: static;
+    padding: 0px;
+    margin: 0px;
+    outline-width: 0px;
+    outline-style: solid;
+    outline-offset: 0px;
+    text-align: left;
+    /*
+    border-color: inherit;
+    outline-color: inherit;
+    text-align: justify;
+    */
+    font-size: inherit;
+    line-height: inherit;
+    letter-spacing: normal;
+    font-kerning: none;
+    text-rendering: optimizeLegibility;
+    vertical-align: baseline;
+    touch-action: manipulation;
+    -ms-touch-action: manipulation;
+    border-width: 0px;
+    border-style: solid;
+    text-overflow: ellipsis;
+    overflow-x: visible;
+    overflow-y: visible;
+    pointer-events: auto;
+    white-space: inherit;
+    /*
+    FireFox and IE do not support word-break:break-word.
+    word-break:break-word is deprecated.
+    word-break:break-word is the desired behavior for overflowing text: break spaces first, then characters (but doesn't work in FireFox/IE, as mentioned before).
+    overflow-wrap is an alias for word-wrap.
+    word-wrap:break-word is the same as word-break:break-word, but works only on block-level elements with a set width, block-level elements whose parents are block-level elements with a set width,
+    ...and table cells whose containing table has table-layout:fixed.
+    word-break:break-all works without having to define the element's width, but it breaks characters before it breaks spaces.
+    ------------------------
+    overflow-wrap: normal;
+    word-wrap: normal;
+    word-break: normal;
+    */
+    overflow-wrap: inherit;
+    word-wrap: inherit;
+    word-break: inherit;
+    /*
+    can't use width:auto or height:auto or else it causes weird rendering issues in Highcharts, such as:
+    1. when making a chart full-screen, the background turns solid black
+    2. the shading on an "area" line chart is invisible
+    3. the hamburger icon on the top right of charts doesn't light up when hovering over it with the cursor
+    */
+    /*
+    width: auto;
+    height: auto;
+    */
+    min-width: 0px;
+    max-width: none;
+    min-height: 0px;
+    max-height: none;
+    -webkit-overflow-scrolling: touch;
+    /*
+    line-height: normal;
+    vertical-align: text-bottom;
+    */
+    text-decoration-line: none;
+    text-decoration-style: solid;
+    image-rendering: auto;
+    user-select: inherit;
+}
+
+.monospace {
+    font-family: 'Menlo', 'Lucida Console', 'Monaco', 'Consolas', monospace;
+}
+
+.noselect,
+.sosa,
+.heydingsicons,
+.heydingscontrols,
+.icomoon,
+.marvosym,
+.nymphette,
+.stateface {
+    user-select: none;
+}
+
+.clickthrough,
+.clickthrough * {
+    /*
+        have to make sure all descendants have pointer-events:none as well to fully work
+    */
+    pointer-events: none;
+}
+
+.crimsontext {
+    font-family: 'Crimson Text';
+}
+
+.dingbat {
+    /*
+    if setting the color on dingbat fonts isn't working in iOS,
+    set the font to 'Zapf Dingbats' and it will work
+    */
+    font-family: 'Zapf Dingbats';
+}
+
+.icomoon {
+    font-family: 'Icomoon';
+}
+
+.invisible {
+    display: block;
+    vertical-align: top;
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+    overflow: hidden;
+}
+
+ol {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 40px;
+}
+
+ul {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 40px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    display: inline;
+    text-align: inherit;
+    font-weight: bold;
+}
+
+h1, .h1 {
+    font-size: 200%;
+}
+
+h2, .h2 {
+    font-size: 180%;
+}
+
+h3, .h3 {
+    font-size: 160%;
+}
+
+h4, .h4 {
+    font-size: 140%;
+}
+
+h5, .h5 {
+    font-size: 120%;
+}
+
+h6, .h6 {
+    font-size: 100%;
+}
+
+p {
+    width: 100%;
+    display: block;
+    text-indent: 40px;
+}
+
+s {
+    text-decoration: line-through;
+}
+
+.shadowy5 {
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,1);
+}
+
+.shadowy10 {
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+}
+
+.shadowy20 {
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,1);
+}
+
+.glowy5 {
+    box-shadow: 0px 0px 5px 0px rgba(255,255,255,0.75);
+}
+
+.glowy10 {
+    box-shadow: 0px 0px 10px 0px rgba(255,255,255,0.75);
+}
+
+.glowy20 {
+    box-shadow: 0px 0px 20px 0px rgba(255,255,255,0.75);
+}
+
+.rounded1 {
+    border-radius: 1px;
+}
+
+.rounded2 {
+    border-radius: 2px;
+}
+
+.rounded3 {
+    border-radius: 3px;
+}
+
+.rounded4 {
+    border-radius: 4px;
+}
+
+.rounded5 {
+    border-radius: 5px;
+}
+
+.rounded10 {
+    border-radius: 10px;
+}
+
+.rounded20 {
+    border-radius: 20px;
+}
+
+.circle {
+    border-radius: 9999px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.regular {
+    font-weight: normal;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.underline, u {
+    text-decoration-line: underline;
+}
+
+.inline {
+    display: inline;
+}
+
+.inline-block,
+.inline-block-fix {
+    display: inline-block;
+}
+
+.inline-block-fix {
+    vertical-align: top;
+}
+
+.table-cell {
+    display: table-cell;
+}
+
+.floatleft {
+    float: left;
+}
+
+.block {
+    display: block;
+}
+
+    .block:not(img) {
+        width: 100%;
+    }
+
+.nodecoration,
+.nodecoration:active,
+.nodecoration:link,
+.nodecoration:visited,
+.nodecoration:hover,
+.nodecoration a,
+.nodecoration a:active,
+.nodecoration a:link,
+.nodecoration a:visited,
+.nodecoration a:hover {
+    text-decoration: none !important;
+    text-decoration-line: none !important;
+}
+
+.stretch {
+    width: 100%;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.margintop[class] {
+    margin-top: 10px;
+}
+
+.margintop20[class] {
+    margin-top: 20px;
+}
+
+.margintop40[class] {
+    margin-top: 40px;
+}
+
+.margintop60[class] {
+    margin-top: 60px;
+}
+
+.marginbottom[class] {
+    margin-bottom: 10px;
+}
+
+.marginbottom20[class] {
+    margin-bottom: 20px;
+}
+
+.marginleft[class] {
+    margin-left: 10px;
+}
+
+.marginleft20[class] {
+    margin-left: 20px;
+}
+
+.marginright[class] {
+    margin-right: 10px;
+}
+
+.marginright20[class] {
+    margin-right: 20px;
+}
+
+.negativemargintop[class] {
+    margin-top: -10px;
+}
+
+.negativemarginleft[class] {
+    margin-left: -10px;
+}
+
+.negativemarginright[class] {
+    margin-right: -10px;
+}
+
+.margintop5[class] {
+    margin-top: 5px;
+}
+
+.marginbottom5[class] {
+    margin-bottom: 5px;
+}
+
+.marginleft5[class] {
+    margin-left: 5px;
+}
+
+.marginright5[class] {
+    margin-right: 5px;
+}
+
+.negativemargintop5[class] {
+    margin-top: -5px;
+}
+
+.negativemarginleft5[class] {
+    margin-left: -5px;
+}
+
+.negativemarginright5[class] {
+    margin-right: -5px;
+}
+
+
+.paddingall {
+    padding: 10px !important;
+}
+
+.paddingnone {
+    padding: 0px !important;
+}
+
+.paddingtop {
+    padding-top: 10px !important;
+}
+
+.paddingleft {
+    padding-left: 10px !important;
+}
+
+.paddingright {
+    padding-right: 10px !important;
+}
+
+.paddingbottom {
+    padding-bottom: 10px !important;
+}
+
+.paddingall5 {
+    padding: 5px !important;
+}
+
+.paddingtop5 {
+    padding-top: 5px !important;
+}
+
+.paddingleft5 {
+    padding-left: 5px !important;
+}
+
+.paddingright5 {
+    padding-right: 5px !important;
+}
+
+.paddingbottom5 {
+    padding-bottom: 5px !important;
+}
+
+.paddingall20 {
+    padding: 20px !important;
+}
+
+.paddingtop20 {
+    padding-top: 20px !important;
+}
+
+.paddingleft20 {
+    padding-left: 20px !important;
+}
+
+.paddingright20 {
+    padding-right: 20px !important;
+}
+
+.paddingbottom20 {
+    padding-bottom: 20px !important;
+}
+
+.paddingall15 {
+    padding: 15px !important;
+}
+
+.paddingtop15 {
+    padding-top: 15px !important;
+}
+
+.paddingleft15 {
+    padding-left: 15px !important;
+}
+
+.paddingright15 {
+    padding-right: 15px !important;
+}
+
+.paddingbottom15 {
+    padding-bottom: 15px !important;
+}
+
+.paddingtopnone {
+    padding-top: 0px !important;
+}
+
+.paddingleftnone {
+    padding-left: 0px !important;
+}
+
+.paddingrightnone {
+    padding-right: 0px !important;
+}
+
+.paddingbottomnone {
+    padding-bottom: 0px !important;
+}
+
+.borderall {
+    border-width: 1px !important;
+}
+
+.bordertop {
+    border-top-width: 1px !important;
+}
+
+.borderleft {
+    border-left-width: 1px !important;
+}
+
+.borderright {
+    border-right-width: 1px !important;
+}
+
+.borderbottom {
+    border-bottom-width: 1px !important;
+}
+
+.left {
+    margin-right: auto;
+}
+
+.right {
+    margin-left: auto;
+}
+
+.textjustify[class][class] {
+    text-align: justify;
+}
+
+.textleft[class][class] {
+    text-align: left;
+}
+
+.textcenter[class][class] {
+    text-align: center;
+}
+
+.textright[class][class] {
+    text-align: right;
+}
+
+.texttop[class][class] {
+    vertical-align: top;
+}
+
+.textmiddle {
+    vertical-align: middle !important;
+}
+
+.textbottom {
+    vertical-align: bottom;
+}
+
+.textbaseline {
+    vertical-align: baseline;
+}
+
+.nowrap {
+    white-space: nowrap !important;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+.prewrap {
+    white-space: pre-wrap;
+}
+
+.hardwrap {
+    white-space: normal !important;
+    word-break: break-all;
+}
+
+table {
+    display: table;
+    width: 100%;
+    /*
+    table-layout: fixed;
+    */
+    table-layout: auto;
+    border-collapse: collapse;
+    border-spacing: 0px;
+    empty-cells: show;
+}
+
+tr,
+td,
+th {
+    vertical-align: middle;
+}
+
+svg {
+    display: block;
+    width: 100%;
+}
+/*
+    svg * {
+        user-select: none !important;
+    }
+    */
+
+canvas {
+    display: block;
+    width: 100%;
+}
+
+iframe {
+    display: block;
+    /*width:100%;*/
+}
+
+img {
+    display: inline-block;
+    vertical-align: top;
+    width: auto;
+    height: auto;
+}
+
+a,
+a:active,
+a:link,
+a:visited,
+a:hover {
+    text-decoration: underline;
+    text-decoration-line: underline;
+    cursor: pointer;
+}
+
+    a:link,
+    a:active,
+    a:visited,
+    a:hover {
+        user-select: text;
+    }
+
+form {
+    display: block;
+}
+
+label {
+    cursor: pointer;
+}
+
+.question {
+    display: inline-block;
+    vertical-align: top;
+    background-color: #2F7CFF;
+    color: #ffffff;
+    border-width: 1px;
+    border-color: #000000;
+    text-align: center;
+    cursor: pointer;
+    width: 1.4em;
+    height: 1.4em;
+    line-height: 1.4;
+}
+
+    .question::before {
+        content: "?";
+    }
+
+/*##################################################################################################################################################################*/
+/*##################################################################################################################################################################*/
+/*##################################################################################################################################################################*/
+/*##################################################################################################################################################################*/
+
+.o0 {
+    opacity: 0.0;
+}
+
+.o1 {
+    opacity: 0.1;
+}
+
+.o2 {
+    opacity: 0.2;
+}
+
+.o3 {
+    opacity: 0.3;
+}
+
+.o4 {
+    opacity: 0.4;
+}
+
+.o5 {
+    opacity: 0.5;
+}
+
+.o6 {
+    opacity: 0.6;
+}
+
+.o7 {
+    opacity: 0.7;
+}
+
+.o8 {
+    opacity: 0.8;
+}
+
+.o9 {
+    opacity: 0.9;
+}
+
+.o10 {
+    opacity: 1.0;
+}
+
+.blacko0 {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.blacko1 {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.blacko2 {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.blacko3 {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.blacko4 {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.blacko5 {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.blacko6 {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.blacko7 {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.blacko8 {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.blacko9 {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.blacko10 {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.whiteo0 {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.whiteo1 {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.whiteo2 {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.whiteo3 {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.whiteo4 {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.whiteo5 {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.whiteo6 {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.whiteo7 {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.whiteo8 {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.whiteo9 {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.whiteo10 {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+/*##################################################################################################################################################################*/
+/*##################################################################################################################################################################*/
+/*##################################################################################################################################################################*/
+/*##################################################################################################################################################################*/
+
+.tl {
+    top: 0px;
+    left: 0px;
+}
+
+.bl {
+    bottom: 0px;
+    left: 0px;
+}
+
+.tr {
+    top: 0px;
+    right: 0px;
+}
+
+.br {
+    bottom: 0px;
+    right: 0px;
+}
+
+.r1 {
+    position: relative;
+    z-index: 1;
+}
+
+.r2 {
+    position: relative;
+    z-index: 2;
+}
+
+.r3 {
+    position: relative;
+    z-index: 3;
+}
+
+.r4 {
+    position: relative;
+    z-index: 4;
+}
+
+.r5 {
+    position: relative;
+    z-index: 5;
+}
+
+.r6 {
+    position: relative;
+    z-index: 6;
+}
+
+.r7 {
+    position: relative;
+    z-index: 7;
+}
+
+.r8 {
+    position: relative;
+    z-index: 8;
+}
+
+.r9 {
+    position: relative;
+    z-index: 9;
+}
+
+.r10 {
+    position: relative;
+    z-index: 10;
+}
+
+.a1 {
+    position: absolute;
+    z-index: 1;
+}
+
+.a2 {
+    position: absolute;
+    z-index: 2;
+}
+
+.a3 {
+    position: absolute;
+    z-index: 3;
+}
+
+.a4 {
+    position: absolute;
+    z-index: 4;
+}
+
+.a5 {
+    position: absolute;
+    z-index: 5;
+}
+
+.a6 {
+    position: absolute;
+    z-index: 6;
+}
+
+.a7 {
+    position: absolute;
+    z-index: 7;
+}
+
+.a8 {
+    position: absolute;
+    z-index: 8;
+}
+
+.a9 {
+    position: absolute;
+    z-index: 9;
+}
+
+.a10 {
+    position: absolute;
+    z-index: 10;
+}
+
+.f1 {
+    position: fixed;
+    z-index: 1;
+}
+
+.f2 {
+    position: fixed;
+    z-index: 2;
+}
+
+.f3 {
+    position: fixed;
+    z-index: 3;
+}
+
+.f4 {
+    position: fixed;
+    z-index: 4;
+}
+
+.f5 {
+    position: fixed;
+    z-index: 5;
+}
+
+.f6 {
+    position: fixed;
+    z-index: 6;
+}
+
+.f7 {
+    position: fixed;
+    z-index: 7;
+}
+
+.f8 {
+    position: fixed;
+    z-index: 8;
+}
+
+.f9 {
+    position: fixed;
+    z-index: 9;
+}
+
+.f10 {
+    position: fixed;
+    z-index: 9;
+}
+
+
+/*##################################################################################################################################################################*/
+/*##################################################################################################################################################################*/
+/*##################################################################################################################################################################*/
+/*##################################################################################################################################################################*/
+
+.fontsize10px {
+    font-size: 10px;
+}
+
+.fontsize11px {
+    font-size: 11px;
+}
+
+.fontsize12px {
+    font-size: 12px;
+}
+
+.fontsize13px {
+    font-size: 13px;
+}
+
+.fontsize14px {
+    font-size: 14px;
+}
+
+.fontsize15px {
+    font-size: 15px;
+}
+
+.fontsize16px {
+    font-size: 16px;
+}
+
+.fontsize17px {
+    font-size: 17px;
+}
+
+.fontsize18px {
+    font-size: 18px;
+}
+
+.fontsize19px {
+    font-size: 19px;
+}
+
+.fontsize20px {
+    font-size: 20px;
+}
+
+.fontsize22px {
+    font-size: 22px;
+}
+
+.fontsize24px {
+    font-size: 24px;
+}
+
+.fontsize26px {
+    font-size: 26px;
+}
+
+.fontsize28px {
+    font-size: 28px;
+}
+
+.fontsize30px {
+    font-size: 30px;
+}
+
+.fontsize32px {
+    font-size: 32px;
+}
+
+.fontsize34px {
+    font-size: 34px;
+}
+
+.fontsize36px {
+    font-size: 36px;
+}
+
+.fontsize38px {
+    font-size: 38px;
+}
+
+.fontsize40px {
+    font-size: 40px;
+}
+
+.fontsize50px {
+    font-size: 50px;
+}
+
+.fontsize60px {
+    font-size: 60px;
+}
+
+.fontsize70px {
+    font-size: 70px;
+}
+
+.fontsize80px {
+    font-size: 80px;
+}
+
+.fontsize90px {
+    font-size: 90px;
+}
+
+.fontsize100px {
+    font-size: 100px;
+}
+
+.fontsize120px {
+    font-size: 120px;
+}
+
+.fontsize140px {
+    font-size: 140px;
+}
+
+.fontsize160px {
+    font-size: 160px;
+}
+
+.fontsize180px {
+    font-size: 180px;
+}
+
+.fontsize200px {
+    font-size: 200px;
+}
+
+/*##################################################################################################################################################################*/
+/*##################################################################################################################################################################*/
+/*##################################################################################################################################################################*/
+/*##################################################################################################################################################################*/
+
+.fontsize40pct {
+    font-size: 40%;
+}
+
+.fontsize50pct {
+    font-size: 50%;
+}
+
+.fontsize60pct {
+    font-size: 60%;
+}
+
+.fontsize70pct {
+    font-size: 70%;
+}
+
+.fontsize80pct {
+    font-size: 80%;
+}
+
+.fontsize90pct {
+    font-size: 90%;
+}
+
+.fontsize100pct {
+    font-size: 100%;
+}
+
+.fontsize120pct {
+    font-size: 120%;
+}
+
+.fontsize140pct {
+    font-size: 140%;
+}
+
+.fontsize160pct {
+    font-size: 160%;
+}
+
+.fontsize180pct {
+    font-size: 180%;
+}
+
+.fontsize200pct {
+    font-size: 200%;
+}

@@ -1,0 +1,400 @@
+
+/*##############################################################################################################################*/
+/*##############################################################################################################################*/
+/*##############################################################################################################################*/
+/*##############################################################################################################################*/
+
+.row480[class]::after,
+.row480_2cols[class]::after,
+.row480_3cols[class]::after,
+.row480_4cols[class]::after,
+.row480_5cols[class]::after,
+/*######################*/
+.row480_spaceh[class]::after,
+.row480_2cols_spaceh[class]::after,
+.row480_3cols_spaceh[class]::after,
+.row480_4cols_spaceh[class]::after,
+.row480_5cols_spaceh[class]::after,
+/*######################*/
+.row480_spacev[class]::after,
+.row480_2cols_spacev[class]::after,
+.row480_3cols_spacev[class]::after,
+.row480_4cols_spacev[class]::after,
+.row480_5cols_spacev[class]::after,
+/*######################*/
+.row480_spaceh_spacev[class]::after,
+.row480_2cols_spaceh_spacev[class]::after,
+.row480_3cols_spaceh_spacev[class]::after,
+.row480_4cols_spaceh_spacev[class]::after,
+.row480_5cols_spaceh_spacev[class]::after,
+/*######################*/
+.row480_spaceh20[class]::after,
+.row480_2cols_spaceh20[class]::after,
+.row480_3cols_spaceh20[class]::after,
+.row480_4cols_spaceh20[class]::after,
+.row480_5cols_spaceh20[class]::after,
+/*######################*/
+.row480_spaceh20_spacev[class]::after,
+.row480_2cols_spaceh20_spacev[class]::after,
+.row480_3cols_spaceh20_spacev[class]::after,
+.row480_4cols_spaceh20_spacev[class]::after,
+.row480_5cols_spaceh20_spacev[class]::after,
+/*######################*/
+.row480_spacev20[class]::after,
+.row480_2cols_spacev20[class]::after,
+.row480_3cols_spacev20[class]::after,
+.row480_4cols_spacev20[class]::after,
+.row480_5cols_spacev20[class]::after,
+/*######################*/
+.row480_spaceh_spacev20[class]::after,
+.row480_2cols_spaceh_spacev20[class]::after,
+.row480_3cols_spaceh_spacev20[class]::after,
+.row480_4cols_spaceh_spacev20[class]::after,
+.row480_5cols_spaceh_spacev20[class]::after,
+/*######################*/
+.row480_spaceh20_spacev20[class]::after,
+.row480_2cols_spaceh20_spacev20[class]::after,
+.row480_3cols_spaceh20_spacev20[class]::after,
+.row480_4cols_spaceh20_spacev20[class]::after,
+.row480_5cols_spaceh20_spacev20[class]::after,
+/*######################*/
+/*######################*/
+/*######################*/
+/*######################*/
+.row480[class]::before,
+.row480_2cols[class]::before,
+.row480_3cols[class]::before,
+.row480_4cols[class]::before,
+.row480_5cols[class]::before,
+/*######################*/
+.row480_spaceh[class]::before,
+.row480_2cols_spaceh[class]::before,
+.row480_3cols_spaceh[class]::before,
+.row480_4cols_spaceh[class]::before,
+.row480_5cols_spaceh[class]::before,
+/*######################*/
+.row480_spacev[class]::before,
+.row480_2cols_spacev[class]::before,
+.row480_3cols_spacev[class]::before,
+.row480_4cols_spacev[class]::before,
+.row480_5cols_spacev[class]::before,
+/*######################*/
+.row480_spaceh_spacev[class]::before,
+.row480_2cols_spaceh_spacev[class]::before,
+.row480_3cols_spaceh_spacev[class]::before,
+.row480_4cols_spaceh_spacev[class]::before,
+.row480_5cols_spaceh_spacev[class]::before,
+/*######################*/
+.row480_spaceh20[class]::before,
+.row480_2cols_spaceh20[class]::before,
+.row480_3cols_spaceh20[class]::before,
+.row480_4cols_spaceh20[class]::before,
+.row480_5cols_spaceh20[class]::before,
+/*######################*/
+.row480_spaceh20_spacev[class]::before,
+.row480_2cols_spaceh20_spacev[class]::before,
+.row480_3cols_spaceh20_spacev[class]::before,
+.row480_4cols_spaceh20_spacev[class]::before,
+.row480_5cols_spaceh20_spacev[class]::before,
+/*######################*/
+.row480_spacev20[class]::before,
+.row480_2cols_spacev20[class]::before,
+.row480_3cols_spacev20[class]::before,
+.row480_4cols_spacev20[class]::before,
+.row480_5cols_spacev20[class]::before,
+/*######################*/
+.row480_spaceh_spacev20[class]::before,
+.row480_2cols_spaceh_spacev20[class]::before,
+.row480_3cols_spaceh_spacev20[class]::before,
+.row480_4cols_spaceh_spacev20[class]::before,
+.row480_5cols_spaceh_spacev20[class]::before,
+/*######################*/
+.row480_spaceh20_spacev20[class]::before,
+.row480_2cols_spaceh20_spacev20[class]::before,
+.row480_3cols_spaceh20_spacev20[class]::before,
+.row480_4cols_spaceh20_spacev20[class]::before,
+.row480_5cols_spaceh20_spacev20[class]::before {
+    /*clearfix*/
+    content: "";
+    display: block;
+    clear: both;
+    margin: 0px;
+}
+
+.row480[class] > *,
+.row480_2cols[class] > *,
+.row480_3cols[class] > *,
+.row480_4cols[class] > *,
+.row480_5cols[class] > *,
+/*######################*/
+.row480_spaceh[class] > *,
+.row480_2cols_spaceh[class] > *,
+.row480_3cols_spaceh[class] > *,
+.row480_4cols_spaceh[class] > *,
+.row480_5cols_spaceh[class] > *,
+/*######################*/
+.row480_spacev[class] > *,
+.row480_2cols_spacev[class] > *,
+.row480_3cols_spacev[class] > *,
+.row480_4cols_spacev[class] > *,
+.row480_5cols_spacev[class] > *,
+/*######################*/
+.row480_spaceh_spacev[class] > *,
+.row480_2cols_spaceh_spacev[class] > *,
+.row480_3cols_spaceh_spacev[class] > *,
+.row480_4cols_spaceh_spacev[class] > *,
+.row480_5cols_spaceh_spacev[class] > *,
+/*######################*/
+.row480_spaceh20[class] > *,
+.row480_2cols_spaceh20[class] > *,
+.row480_3cols_spaceh20[class] > *,
+.row480_4cols_spaceh20[class] > *,
+.row480_5cols_spaceh20[class] > *,
+/*######################*/
+.row480_spaceh20_spacev[class] > *,
+.row480_2cols_spaceh20_spacev[class] > *,
+.row480_3cols_spaceh20_spacev[class] > *,
+.row480_4cols_spaceh20_spacev[class] > *,
+.row480_5cols_spaceh20_spacev[class] > *,
+/*######################*/
+.row480_spacev20[class] > *,
+.row480_2cols_spacev20[class] > *,
+.row480_3cols_spacev20[class] > *,
+.row480_4cols_spacev20[class] > *,
+.row480_5cols_spacev20[class] > *,
+/*######################*/
+.row480_spaceh_spacev20[class] > *,
+.row480_2cols_spaceh_spacev20[class] > *,
+.row480_3cols_spaceh_spacev20[class] > *,
+.row480_4cols_spaceh_spacev20[class] > *,
+.row480_5cols_spaceh_spacev20[class] > *,
+/*######################*/
+.row480_spaceh20_spacev20[class] > *,
+.row480_2cols_spaceh20_spacev20[class] > *,
+.row480_3cols_spaceh20_spacev20[class] > *,
+.row480_4cols_spaceh20_spacev20[class] > *,
+.row480_5cols_spaceh20_spacev20[class] > * {
+    display: block;
+    width: auto;
+    float: none;
+}
+
+    .row480_spacev[class] > *:not(:first-child),
+    .row480_2cols_spacev[class] > *:not(:first-child),
+    .row480_3cols_spacev[class] > *:not(:first-child),
+    .row480_4cols_spacev[class] > *:not(:first-child),
+    .row480_5cols_spacev[class] > *:not(:first-child),
+    /*######################*/
+    .row480_spaceh_spacev[class] > *:not(:first-child),
+    .row480_2cols_spaceh_spacev[class] > *:not(:first-child),
+    .row480_3cols_spaceh_spacev[class] > *:not(:first-child),
+    .row480_4cols_spaceh_spacev[class] > *:not(:first-child),
+    .row480_5cols_spaceh_spacev[class] > *:not(:first-child),
+    /*######################*/
+    .row480_spaceh20_spacev[class] > *:not(:first-child),
+    .row480_2cols_spaceh20_spacev[class] > *:not(:first-child),
+    .row480_3cols_spaceh20_spacev[class] > *:not(:first-child),
+    .row480_4cols_spaceh20_spacev[class] > *:not(:first-child),
+    .row480_5cols_spaceh20_spacev[class] > *:not(:first-child) {
+        margin-top: 10px;
+    }
+
+    .row480_spacev20[class] > *:not(:first-child),
+    .row480_2cols_spacev20[class] > *:not(:first-child),
+    .row480_3cols_spacev20[class] > *:not(:first-child),
+    .row480_4cols_spacev20[class] > *:not(:first-child),
+    .row480_5cols_spacev20[class] > *:not(:first-child),
+    /*######################*/
+    .row480_spaceh_spacev20[class] > *:not(:first-child),
+    .row480_2cols_spaceh_spacev20[class] > *:not(:first-child),
+    .row480_3cols_spaceh_spacev20[class] > *:not(:first-child),
+    .row480_4cols_spaceh_spacev20[class] > *:not(:first-child),
+    .row480_5cols_spaceh_spacev20[class] > *:not(:first-child),
+    /*######################*/
+    .row480_spaceh20_spacev20[class] > *:not(:first-child),
+    .row480_2cols_spaceh20_spacev20[class] > *:not(:first-child),
+    .row480_3cols_spaceh20_spacev20[class] > *:not(:first-child),
+    .row480_4cols_spaceh20_spacev20[class] > *:not(:first-child),
+    .row480_5cols_spaceh20_spacev20[class] > *:not(:first-child) {
+        margin-top: 20px;
+    }
+
+@media (min-width: 480px) {
+    .row480[class] > *,
+    .row480_2cols[class] > *,
+    .row480_3cols[class] > *,
+    .row480_4cols[class] > *,
+    .row480_5cols[class] > *,
+    /*######################*/
+    .row480_spaceh[class] > *,
+    .row480_2cols_spaceh[class] > *,
+    .row480_3cols_spaceh[class] > *,
+    .row480_4cols_spaceh[class] > *,
+    .row480_5cols_spaceh[class] > *,
+    /*######################*/
+    .row480_spacev[class] > *,
+    .row480_2cols_spacev[class] > *,
+    .row480_3cols_spacev[class] > *,
+    .row480_4cols_spacev[class] > *,
+    .row480_5cols_spacev[class] > *,
+    /*######################*/
+    .row480_spaceh_spacev[class] > *,
+    .row480_2cols_spaceh_spacev[class] > *,
+    .row480_3cols_spaceh_spacev[class] > *,
+    .row480_4cols_spaceh_spacev[class] > *,
+    .row480_5cols_spaceh_spacev[class] > *,
+    /*######################*/
+    .row480_spaceh20[class] > *,
+    .row480_2cols_spaceh20[class] > *,
+    .row480_3cols_spaceh20[class] > *,
+    .row480_4cols_spaceh20[class] > *,
+    .row480_5cols_spaceh20[class] > *,
+    /*######################*/
+    .row480_spaceh20_spacev[class] > *,
+    .row480_2cols_spaceh20_spacev[class] > *,
+    .row480_3cols_spaceh20_spacev[class] > *,
+    .row480_4cols_spaceh20_spacev[class] > *,
+    .row480_5cols_spaceh20_spacev[class] > *,
+    /*######################*/
+    .row480_spacev20[class] > *,
+    .row480_2cols_spacev20[class] > *,
+    .row480_3cols_spacev20[class] > *,
+    .row480_4cols_spacev20[class] > *,
+    .row480_5cols_spacev20[class] > *,
+    /*######################*/
+    .row480_spaceh_spacev20[class] > *,
+    .row480_2cols_spaceh_spacev20[class] > *,
+    .row480_3cols_spaceh_spacev20[class] > *,
+    .row480_4cols_spaceh_spacev20[class] > *,
+    .row480_5cols_spaceh_spacev20[class] > *,
+    /*######################*/
+    .row480_spaceh20_spacev20[class] > *,
+    .row480_2cols_spaceh20_spacev20[class] > *,
+    .row480_3cols_spaceh20_spacev20[class] > *,
+    .row480_4cols_spaceh20_spacev20[class] > *,
+    .row480_5cols_spaceh20_spacev20[class] > * {
+        width: auto;
+        float: left;
+        /*have to do min-height: 1px because*/
+        /*floating divs that take up no space are*/
+        /*removed from the document flow*/
+        min-height: 1px;
+        margin-top: 0px !important;
+    }
+
+        .row480_spaceh[class] > *:not(:first-child),
+        .row480_2cols_spaceh[class] > *:not(:first-child),
+        .row480_3cols_spaceh[class] > *:not(:first-child),
+        .row480_4cols_spaceh[class] > *:not(:first-child),
+        .row480_5cols_spaceh[class] > *:not(:first-child),
+        /*######################*/
+        .row480_spaceh_spacev[class] > *:not(:first-child),
+        .row480_2cols_spaceh_spacev[class] > *:not(:first-child),
+        .row480_3cols_spaceh_spacev[class] > *:not(:first-child),
+        .row480_4cols_spaceh_spacev[class] > *:not(:first-child),
+        .row480_5cols_spaceh_spacev[class] > *:not(:first-child),
+        /*######################*/
+        .row480_spaceh_spacev20[class] > *:not(:first-child),
+        .row480_2cols_spaceh_spacev20[class] > *:not(:first-child),
+        .row480_3cols_spaceh_spacev20[class] > *:not(:first-child),
+        .row480_4cols_spaceh_spacev20[class] > *:not(:first-child),
+        .row480_5cols_spaceh_spacev20[class] > *:not(:first-child) {
+            margin-left: 10px;
+        }
+
+        .row480_spaceh20[class] > *:not(:first-child),
+        .row480_2cols_spaceh20[class] > *:not(:first-child),
+        .row480_3cols_spaceh20[class] > *:not(:first-child),
+        .row480_4cols_spaceh20[class] > *:not(:first-child),
+        .row480_5cols_spaceh20[class] > *:not(:first-child),
+        /*######################*/
+        .row480_spaceh20_spacev[class] > *:not(:first-child),
+        .row480_2cols_spaceh20_spacev[class] > *:not(:first-child),
+        .row480_3cols_spaceh20_spacev[class] > *:not(:first-child),
+        .row480_4cols_spaceh20_spacev[class] > *:not(:first-child),
+        .row480_5cols_spaceh20_spacev[class] > *:not(:first-child),
+        /*######################*/
+        .row480_spaceh20_spacev20[class] > *:not(:first-child),
+        .row480_2cols_spaceh20_spacev20[class] > *:not(:first-child),
+        .row480_3cols_spaceh20_spacev20[class] > *:not(:first-child),
+        .row480_4cols_spaceh20_spacev20[class] > *:not(:first-child),
+        .row480_5cols_spaceh20_spacev20[class] > *:not(:first-child) {
+            margin-left: 20px;
+        }
+    /*############################################*/
+    /*############################################*/
+    .row480_2cols[class] > *,
+    .row480_2cols_spacev[class] > *,
+    .row480_2cols_spacev20[class] > * {
+        width: 50%;
+    }
+
+    .row480_2cols_spaceh[class] > *,
+    .row480_2cols_spaceh_spacev[class] > *,
+    .row480_2cols_spaceh_spacev20[class] > * {
+        width: calc(50% - 5px);
+    }
+
+    .row480_2cols_spaceh20[class] > *,
+    .row480_2cols_spaceh20_spacev[class] > *,
+    .row480_2cols_spaceh20_spacev20[class] > * {
+        width: calc(50% - 10px);
+    }
+    /*############################################*/
+    /*############################################*/
+    .row480_3cols[class] > *,
+    .row480_3cols_spacev[class] > *,
+    .row480_3cols_spacev20[class] > * {
+        width: calc(100% / 3);
+    }
+
+    .row480_3cols_spaceh[class] > *,
+    .row480_3cols_spaceh_spacev[class] > *,
+    .row480_3cols_spaceh_spacev20[class] > * {
+        width: calc((100% / 3) - 6.666666667px);
+    }
+
+    .row480_3cols_spaceh20[class] > *,
+    .row480_3cols_spaceh20_spacev[class] > *,
+    .row480_3cols_spaceh20_spacev20[class] > * {
+        width: calc((100% / 3) - 13.333333333px);
+    }
+    /*############################################*/
+    /*############################################*/
+    .row480_4cols[class] > *,
+    .row480_4cols_spacev[class] > *,
+    .row480_4cols_spacev20[class] > * {
+        width: 25%;
+    }
+
+    .row480_4cols_spaceh[class] > *,
+    .row480_4cols_spaceh_spacev[class] > *,
+    .row480_4cols_spaceh_spacev20[class] > * {
+        width: calc(25% - 7.5px);
+    }
+
+    .row480_4cols_spaceh20[class] > *,
+    .row480_4cols_spaceh20_spacev[class] > *,
+    .row480_4cols_spaceh20_spacev20[class] > * {
+        width: calc(25% - 15px);
+    }
+    /*############################################*/
+    /*############################################*/
+    .row480_5cols[class] > *,
+    .row480_5cols_spacev[class] > *,
+    .row480_5cols_spacev20[class] > * {
+        width: 20%;
+    }
+
+    .row480_5cols_spaceh[class] > *,
+    .row480_5cols_spaceh_spacev[class] > *,
+    .row480_5cols_spaceh_spacev20[class] > * {
+        width: calc(20% - 8px);
+    }
+
+    .row480_5cols_spaceh20[class] > *,
+    .row480_5cols_spaceh20_spacev[class] > *,
+    .row480_5cols_spaceh20_spacev20[class] > * {
+        width: calc(20% - 16px);
+    }
+}

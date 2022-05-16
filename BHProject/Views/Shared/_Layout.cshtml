@@ -1,0 +1,225 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - BHProject</title>
+    <link rel="stylesheet" href="~/css/general.css" />
+    <link rel="stylesheet" href="~/css/inputs.css" />
+    <link rel="stylesheet" href="~/css/lists480.css" />
+    <link rel="stylesheet" href="~/css/lists720.css" />
+    <link rel="stylesheet" href="~/css/lists960.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/float.css" />
+    <link rel="stylesheet" href="~/css/spinners.css" />
+    <link rel="stylesheet" href="~/css/tables.css" />
+    <script src="~/js/js.js"></script>
+    <script src="~/js/screenhelpers.js"></script>
+    <script src="~/js/anime.min.js"></script>
+    <script src="~/js/ajax.js"></script>
+    <script src="~/js/popup.js"></script>
+    <script src="~/js/xhr.js"></script>
+    <script src="~/js/defaultstyles.js"></script>
+</head>
+<body class="r1 CloudWhiteBG DarkGrayText" style="" onload="">
+    <div class="f1 mainbg"></div>
+    <!--
+    <div class="f1 layoutGradient" style=""></div>
+    <div class="f2 customlayoutbg" style=""></div>
+        -->
+    <style>
+        #MainLayoutHeaderContainer {
+        }
+
+        #MainLayoutFooterContainer {
+        }
+
+        #HamburgerScreen {
+            height: calc(100% - 65px);
+        }
+
+        @@media (min-width:600px) {
+            .MainSiteLogoNormal {
+                width: 200px;
+                height: auto;
+            }
+
+            #MainLayoutHeaderElement, #MainLayoutHeaderSpacer {
+                height: 120px;
+            }
+        }
+
+        @@media (max-width:599px) {
+            .MainSiteLogoNormal {
+                width: 130px;
+                height: auto;
+            }
+
+            #MainLayoutHeaderElement, #MainLayoutHeaderSpacer {
+                height: 65px;
+            }
+        }
+    </style>
+    <div class="f5 blacko5" id="HamburgerScreen" style="width:100%;bottom:0px;left:0px;">
+        <div class="r1 homeMaxWidth" style="height:100%;overflow:visible;">
+            <div class="a1 whitebackground nodecoration" id="HamburgerMenu" style="width:100%;height:100%;top:0px;right:0px;">
+                <div class="padv20 RoyalBlueText texttheme1 fontsize20px paddingtop20 paddingleft20">
+                    <div><a href="/home/editreasons">Edit Candidate Reasons</a></div>
+                    <hr class="margintop20 GradientBlue" />
+                    <div class="margintop20"><a href="/home/fetchrandomreason">Fetch Random Reason</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="f4 whiteo10" id="MainLayoutHeaderContainer" style="width:100%;top:0px;left:0px;">
+        <div class="homeMaxWidth paddingleft5 paddingright5" style="">
+            <div class="nodecoration RoyalBlueText" id="MainLayoutHeaderElement" style="">
+                <table style="height:100%;">
+                    <tr>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td class="stretch">
+                                        <table class="nowrap" style="">
+                                            <tr>
+                                                <td class="">
+                                                    <a class="block" href="/">
+                                                        <img class="MainSiteLogoNormal" src="/img/main_logo_small.png" />
+                                                    </a>
+                                                </td>
+                                                <td class="textright">
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td class="HideWhenWidthOver600 paddingleft20">
+                                        <div class="glyph grow DarkGrayText" id="HamburgerMenuButton" title="Menu" style="cursor:pointer;font-size:40px;">&#xec71;</div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <div class="HideWhenWidthUnder600 margintop" style="">
+                                <hr class="GradientBlue" />
+                                <table class="center nowrap texttheme1 padh40 margintop" style="">
+                                    <tr>
+                                        <td>
+                                            <a href="/home/editreasons">Edit Reasons</a>
+                                        </td>
+                                        <td>
+                                            <a href="/home/fetchrandomreason">Fetch Random Reason</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script>
+         (function() {
+            let Animating = false;
+            HamburgerScreen.style.left = "100%";
+            HamburgerScreen.style.display = "none";
+            let HamburgerOnClick = function(ForceClose) {
+                ForceClose = typeof(ForceClose) != "undefined" ? ForceClose : false;
+                if (!Animating) {
+                    let Easing = "easeOutQuad";
+                    let Duration = 250;
+                    let HamburgerScreen = document.getElementById("HamburgerScreen");
+                    let HamburgerMenuButton = document.getElementById("HamburgerMenuButton");
+                    HamburgerMenuButton.onclick = null;
+                    let Visible = HamburgerScreen.style.display != "none";
+                    if (ForceClose || Visible) {
+                        if (Visible) {
+                            anime({
+                                targets: HamburgerScreen,
+                                left: "100%",
+                                easing: Easing,
+                                duration: Duration,
+                                complete: function() {
+                                    Animating = false;
+                                    HamburgerScreen.style.display = "none";
+                                    HamburgerMenuButton.onclick = function(){ HamburgerOnClick(); };
+                                }
+                            });
+                        } else {
+                            Animating = false;
+                            HamburgerMenuButton.onclick =function(){ HamburgerOnClick(); };
+                        }
+                    } else {
+                        HamburgerScreen.style.display = "";
+                        anime({
+                            targets: HamburgerScreen,
+                            left: "0%",
+                            easing: Easing,
+                            duration: Duration,
+                            complete: function() {
+                                Animating = false;
+                                HamburgerMenuButton.onclick =function(){ HamburgerOnClick(); };
+                            }
+                        });
+                    }
+                }
+            };
+            HamburgerMenuButton.onclick = function(){ HamburgerOnClick(); };
+            let LastExceeds = false;
+            let mediaQuery = window.matchMedia("(min-width:600px)");
+            let mediaFunc = function() {
+                if (mediaQuery.matches) {
+                    if (!LastExceeds) {
+                        HamburgerOnClick(true);
+                    }
+                    LastExceeds = true;
+                } else {
+                    LastExceeds = false;
+                }
+            };
+            mediaQuery.addListener(mediaFunc);
+        })();
+    </script>
+    <table class="r2" style="height:100%;overflow:hidden;table-layout:fixed;">
+        <tr>
+            <td class="texttop" style="">
+                <div class="r2" style="">
+                    <!--<div class="topshadow10_inner o3"></div>-->
+                    <div class="r1" id="MainLayoutHeaderSpacer" style=""></div>
+                    <div class="r2 homeMaxWidth" style="">
+                        <div class="a1 HideWhenWidthUnder600" style="top:0.2rem;right:0px;">
+                            <div class="r1 right" style="width:calc(0.3rem + 30%);right:calc(((0.25rem + 20%) / 3) * -1);">
+                                @*<img src="/img/pattern.png" style="width:100%;" />*@
+                            </div>
+                        </div>
+                        <div class="r2">@RenderBody()</div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="textbottom" style="">
+                <div class="r2 DarkGrayBG CloudWhiteText" id="MainLayoutFooterContainer" style="">
+                    <!--<div class="topshadow10_outer o3"></div>-->
+                    <div class="homeMaxWidth paddingall" id="MainLayoutFooterElement" style="min-height:100px;">
+                        <table>
+                            <tr>
+                                <td class="textcenter">
+                                    This is a sticky footer.
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <script>
+        if (ScreenHelpers.isMobile) {
+            ScreenHelpers.addViewportHeightChangeEvent(function () {
+                document.body.parentNode.style.fontSize = ScreenHelpers.viewportHeight + "px";
+            }, true);
+        } else {
+            document.body.parentNode.style.fontSize = "100vh";
+        }
+    </script>
+</body>
+</html>

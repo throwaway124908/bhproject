@@ -1,0 +1,72 @@
+@keyframes anim-rotate {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.icon-spinner-1, .icon-spinner-2, .icon-spinner-3, .icon-spinner-4, .icon-spinner-5, .icon-spinner-6, .icon-spinner-7 {
+    font-family: 'Icomoon';
+    display: inline-block;
+    vertical-align: top;
+    font-size: 64px;
+    line-height: 1;
+    width: 1em;
+    height: 1em;
+    font-variant: normal;
+    text-transform: none;
+    text-align: center;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    /*
+    color: #000000;
+    text-shadow: 0 0 .25em rgba(255,255,255, .3);
+    */
+}
+
+    .icon-spinner-1::before, .icon-spinner-2::before, .icon-spinner-3::before, .icon-spinner-4::before, .icon-spinner-5::before, .icon-spinner-6::before, .icon-spinner-7::before {
+        line-height: 1;
+    }
+
+.icon-spinner-2, .icon-spinner-3, .icon-spinner-4, .icon-spinner-5, .icon-spinner-6 {
+    animation: anim-rotate 2s infinite linear;
+}
+
+.icon-spinner-1 {
+    animation: anim-rotate 1s infinite steps(8);
+}
+
+.icon-spinner-7 {
+    animation: anim-rotate 1s infinite steps(12);
+}
+
+.icon-spinner-1::before {
+    content: "\eb22";
+}
+
+.icon-spinner-2::before {
+    content: "\eb23";
+}
+
+.icon-spinner-3::before {
+    content: "\eb25";
+}
+
+.icon-spinner-4::before {
+    content: "\eb26";
+}
+
+.icon-spinner-5::before {
+    content: "\eb2a";
+}
+
+.icon-spinner-6::before {
+    content: "\eb2c";
+}
+
+.icon-spinner-7::before {
+    content: "\eb24";
+}
